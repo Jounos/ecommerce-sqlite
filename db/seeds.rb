@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Carro.create(nome: 'Fiesta', modelo: 'Ford', ano: 2009) if Carro.where(nome: 'Fiesta').count == 0
+Carro.create(nome: 'Gol', modelo: 'Volksvagen', ano: 2011) if Carro.where(nome: 'Gol').count == 0
+Carro.create(nome: 'Civic', modelo: 'Honda', ano: 2015) if Carro.where(nome: 'Civic').count == 0
+Carro.create(nome: 'Corolla', modelo: 'Toyota', ano: 2018) if Carro.where(nome: 'Corolla').count == 0

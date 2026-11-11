@@ -1,13 +1,10 @@
 class CarrosController < ApplicationController
   def index
-    @carros = Carro.todos
+    @carros = Carro.all
   end
   
   def show
-    carros = Carro.todos
     carro_id = params[:id]
-    @carro = carros.find{ |c| c.id == carro_id }
-    puts @carro.inspect
-    @carro
+    @carro = Carro.find(carro_id)
   end
 end
