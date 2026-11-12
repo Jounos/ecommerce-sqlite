@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   root "home#index"
   get "/carros", to: "carros#index", as: "carros"
   get "/carros/:id", to: "carros#show", as: "carros_show"
+  get "/carros/:id/editar", to: "carros#editar", as: "carros_editar"
+  get "/carros/:id/apagar", to: "carros#apagar", as: "carros_apagar"
 end

@@ -7,4 +7,9 @@ class CarrosController < ApplicationController
     carro_id = params[:id]
     @carro = Carro.find(carro_id)
   end
+
+  def editar
+    carro_id = params[:id]
+    @carro = Carro.find(carro_id)
+  end
 end
