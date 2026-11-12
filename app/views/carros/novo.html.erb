@@ -1,0 +1,18 @@
+<section class="text-center container">
+    <h1>Mostrando o carro</h1>
+
+    <hr>
+
+    <div style="text-align: left">
+
+        <form action="<%= carros_criar_path %>" method="post">
+            <div> <strong>Nome</strong>: <input type="text" name="nome"></div>
+            <div> <strong>Modelo</strong>: <input type="text" name="modelo"></div>
+            <div> <strong>Ano</strong>: <input type="text" name="ano"></div>
+
+            <hr>  
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <a href="/carros" class="btn btn-warning">Voltar para a lista</a>
+        </form>
+    </div>
+</section>
