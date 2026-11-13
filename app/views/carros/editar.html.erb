@@ -5,11 +5,10 @@
 
     <div style="text-align: left">
 
-        <form action="">
-            <div> <strong>ID</strong>: <input type="text" value="<%= @carro.id %>"></div>
-            <div> <strong>Modelo</strong>: <input type="text" value="<%= @carro.modelo %>"></div>
-            <div> <strong>Ano</strong>: <input type="text" value="<%= @carro.ano %>"></div>
+        <form action="<%= carro_alterar_path(@carro.id) %>" method="POST">
 
+            <input type="hidden" name="_method" value="PUT">
+            <%= render "form" %>
             <hr>  
             <button type="submit" class="btn btn-primary">Enviar</button>
             <a href="/carros" class="btn btn-warning">Voltar para a lista</a>

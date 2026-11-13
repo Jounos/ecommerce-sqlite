@@ -26,7 +26,10 @@
                     <td style="width: 260px">
                         <%= link_to "Mostrar", carros_show_path(carro.id), "class": "btn btn-primary" %>
                         <%= link_to "Editar", carros_editar_path(carro.id), "class": "btn btn-warning" %>
-                        <%= link_to "Apagar", carros_apagar_path(carro.id), "class": "btn btn-danger" %>
+                        <form action="<%= carros_apagar_path(carro) %>" onsubmit="return confirm('confirma ?')" method="POST" style="display: inline">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-danger">Apagar</button>
+                        </form>
                     </td>
                 </tr>
             <% end %>

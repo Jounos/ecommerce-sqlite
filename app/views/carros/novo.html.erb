@@ -6,10 +6,11 @@
     <div style="text-align: left">
 
         <form action="<%= carros_criar_path %>" method="post">
-            <div> <strong>Nome</strong>: <input type="text" name="nome"></div>
+            <%# <div> <strong>Nome</strong>: <input type="text" name="nome"></div>
             <div> <strong>Modelo</strong>: <input type="text" name="modelo"></div>
-            <div> <strong>Ano</strong>: <input type="text" name="ano"></div>
+            <div> <strong>Ano</strong>: <input type="text" name="ano"></div> %>
 
+            <%= render "form" %>
             <hr>  
             <button type="submit" class="btn btn-primary">Enviar</button>
             <a href="/carros" class="btn btn-warning">Voltar para a lista</a>
