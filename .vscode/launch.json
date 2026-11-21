@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "rdbg",
+      "name": "Rails server",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "script": "bin/rails",
+      "args": ["server"],
+      "useBundler": true,
+      "askParameters": false,
+      "rdbgPath": "rvm 3.2.3 do bundle exec rdbg"
+    },
+    {
+      "type": "rdbg",
+      "name": "RSpec (arquivo atual)",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "command": "bundle exec rspec",
+      "script": "${file}",
+      "askParameters": false,
+      "rdbgPath": "rvm 3.2.3 do bundle exec rdbg"
+    },
+    {
+      "type": "rdbg",
+      "name": "Attach",
+      "request": "attach",
+      "rdbgPath": "rvm 3.2.3 do bundle exec rdbg"
+    }
+  ]
+}
